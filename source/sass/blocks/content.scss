@@ -1,0 +1,48 @@
+.content {
+  position: relative;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 31px;
+  text-decoration: none;
+}
+
+.content--left {
+  background-color: #63d1bb;
+}
+
+.content--left::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 36px;
+  width: 40px;
+  height: 62px;
+  background-image: url("../img/icon-interior.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.content--right {
+  background-color: #56c3b2;
+}
+
+.content--right::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/icon-toy.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.content__text {
+  margin: 0;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #ffffff;
+}
