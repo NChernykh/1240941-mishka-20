@@ -6,8 +6,9 @@
 }
 
 .page__body {
+  width: 320px;
   min-height: 100%;
   margin: 0;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: $white;
+  color: $black;
 }

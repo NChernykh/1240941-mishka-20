@@ -1,18 +1,18 @@
 .reviews {
   position: relative;
   margin-bottom: 105px;
-}
 
-.reviews::after {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  width: 100%;
-  height: 6px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: bottom center;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: bottom center;
+  }
 }
 
 .reviews__title {

@@ -15,15 +15,15 @@
 .about__item {
   position: relative;
   padding-top: 82px;
-}
 
-.about__item::before {
-  content: "";
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .about__item--ecology::before {

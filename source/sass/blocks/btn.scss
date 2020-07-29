@@ -1,5 +1,6 @@
 .btn {
   display: block;
+  width: 260px;
   padding: 16px 0;
   font: inherit;
   font-size: 17px;
@@ -7,8 +8,18 @@
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
-  color: #444444;
+  color: $darkgrey;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid #444444;
+  border: 2px solid $darkgrey;
+
+  &:hover {
+    color: $white;
+    background: linear-gradient(0deg, $darkgrey, $darkgrey);
+  }
+
+  &:focus,
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

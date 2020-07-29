@@ -7,70 +7,88 @@
 </head>
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин игрушек Мишка">
-    </a>
-    <nav class="main-nav">
-      <button class="nav-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link">
-              Каталог товаров
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
-              Вязание на заказ
-            </a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__link search" href="search.html">
-              Поиск по сайту
-            </a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link cart" href="cart.html">
-              Корзина: пока пуста
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="header-top">
+      <div class="container">
+        <a class="header-top__logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин игрушек Мишка">
+        </a>
+    </div>
+      <nav class="main-nav">
+        <button class="nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item site-list__item">
+              <a class="main-nav__link site-list__link">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="main-nav__item site-list__item">
+              <a class="main-nav__link site-list__link" href="form.html">
+                Вязание на заказ
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="main-nav__item user-list__item">
+              <a class="main-nav__link user-list__link search" href="search.html">
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="main-nav__item user-list__item">
+              <a class="main-nav__link user-list__link cart" href="cart.html">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="intro">
+        <p class="intro__title">Каталог товаров</p>
+    </div>
   </header>
   <main class="catalog-main">
-    <h1 class="catalog-main__title">Каталог товаров</h1>
     <div class="container">
-      <section class="products-cards">
+      <h1 class="visually-hidden">Каталог товаров</h1>
+      <section class="products-catalog">
         <h2 class="visually-hidden">Карточки товара</h2>
-        <acticle class="product">
-          <a href="" class="product__link">
-            <img src="" alt="Вязанная игрушка Зайчик" width="260" height="195">
-            <h3 class="product__title">Зайчик-попрыгайчик</h3>
-            <p class="product__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
-            <span class="product__cost">1&nbsp;200&nbsp;руб.</span>
-          </a>
-        </acticle>
-        <acticle class="product">
-          <a href="" class="product__link-img">
-            <img src="" alt="Вязанная корзинка для белья" width="260" height="195">
-            <h3 class="product__title">Корзинка для белья</h3>
-            <p class="product__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
-            <span class="product__cost">690&nbsp;руб.</span>
-          </a>
-        </acticle>
-        <acticle class="product">
-          <a href="" class="product__link-img">
-            <img src="" alt="Большая корзинка для игрушек">
-            <h3 class="product__title">Большая корзинка для игрушек</h3>
-            <p class="product__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
-            <span class="product__cost">11&nbsp;500&nbsp;руб.</span>
-          </a>
-        </acticle>
+        <div class="products-catalog__cards">
+          <acticle class="product">
+            <a href="#" class="product__link-img">
+              <img src="img/photo-hare-mobile@1x.jpg" alt="Вязанная игрушка Зайчик" width="260" height="195">
+            </a>
+            <div class="product__item">
+              <h3 class="product__title"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h3>
+              <p class="product__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
+              <div class="block__wrapper"><span class="product__cost">1&nbsp;200&nbsp;руб.</span>
+              </div>
+            </div>
+          </acticle>
+          <acticle class="product">
+            <a href="" class="product__link-img">
+              <img src="img/photo-bowl-mobile@1x.jpg" alt="Вязанная корзинка для белья" width="260" height="195">
+            </a>
+            <div class="product__item">
+              <h3 class="product__title">Корзинка для белья</h3>
+              <p class="product__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
+              <div class="block__wrapper"><span class="product__cost">690&nbsp;руб.</span>
+              </div>
+            </div>
+          </acticle>
+          <acticle class="product">
+            <a href="" class="product__link-img">
+              <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
+            </a>
+            <div class="product__item">
+              <h3 class="product__title">Большая корзинка для игрушек</h3>
+              <p class="product__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
+              <div class="block__wrapper"><span class="product__cost">11&nbsp;500&nbsp;руб.</span>
+              </div>
+            </div>
+          </acticle>
+        </div>
       </section>
       <section class="video">
         <h2 class="video__title">Процесс производства</h2>
@@ -101,9 +119,11 @@
         </a>
       </div>
       <div class="footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
-        </a>
+        <div class="block__wrapper">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
+          </a>
+      </div>
       </div>
     </div>
   </footer>
