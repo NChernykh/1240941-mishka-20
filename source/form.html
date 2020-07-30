@@ -3,47 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Мишка/Форма заказа</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <img src="#" width="86" height="35" alt="Магазин игрушек Мишка">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">
-              Каталог товаров
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link">
-              Вязание на заказ
-            </a>
-          </li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__link search" href="search.html">
-              Поиск по сайту
-            </a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link cart" href="cart.html">
-              Корзина: пока пуста
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="header-top">
+      <div class="container">
+        <a class="header-top__logo">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин игрушек Мишка">
+        </a>
+    </div>
+      <nav class="main-nav">
+        <button class="nav-toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="main-nav__item site-list__item">
+              <a class="main-nav__link site-list__link" href="catalog.html">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="main-nav__item site-list__item">
+              <a class="main-nav__link site-list__link">
+                Вязание на заказ
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="main-nav__item user-list__item">
+              <a class="main-nav__link user-list__link search" href="search.html">
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="main-nav__item user-list__item">
+              <a class="main-nav__link user-list__link cart" href="cart.html">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="intro">
+        <p class="intro__title">Вязание на заказ</p>
+    </div>
+    </div>
   </header>
   <main class="form-main">
-    <h1 class="form-main__title">Вязание на заказ</h1>
     <div class="container">
+      <h1 class="visually-hidden">Вязание на заказ</h1>
       <p class="form-main__desc">Мы&nbsp;будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
       <section class="form">
         <h2 class="form__title">Форма заказа</h2>
@@ -72,9 +80,11 @@
         </a>
       </div>
       <div class="footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
-        </a>
+        <div class="block__wrapper">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>

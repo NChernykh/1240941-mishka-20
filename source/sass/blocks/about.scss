@@ -1,0 +1,40 @@
+.about__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about__list {
+  margin: 0;
+  margin-bottom: 58px;
+  padding: 0;
+  list-style: none;
+}
+
+.about__item {
+  position: relative;
+  padding-top: 82px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.about__item--ecology::before {
+  width: 32px;
+  height: 37px;
+  background-image: url("../img/icon-feature-flower.svg");
+}
+
+.about__desc {
+  margin: 0;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+}
