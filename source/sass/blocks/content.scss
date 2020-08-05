@@ -1,18 +1,31 @@
 .content {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    display: flex;
+  }
+}
+
+.content__link {
   position: relative;
   display: block;
   padding-top: 24px;
   padding-bottom: 31px;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
 }
 
-.content--left {
+.content__link--left {
   background-color: $maincolor;
 
   &::after {
     content: "";
     position: absolute;
-    top: 23px;
+    top: 30px;
     right: 36px;
     width: 40px;
     height: 62px;
@@ -28,14 +41,14 @@
   }
 }
 
-.content--right {
+.content__link--right {
   background-color: #56c3b2;
 
   &::after {
     content: "";
     position: absolute;
-    top: 21px;
-    right: 27px;
+    top: 31px;
+    right: 33px;
     width: 60px;
     height: 60px;
     background-image: url("../img/icon-toy.svg");
@@ -57,4 +70,11 @@
   font-size: 19px;
   line-height: 24px;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+    width: 200px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

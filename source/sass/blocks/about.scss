@@ -1,8 +1,17 @@
+.about {
+  margin-bottom: 58px;
+}
+
 .about__title {
   margin: 0;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
 
 .about__list {
@@ -10,6 +19,12 @@
   margin-bottom: 58px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 42px;
+  }
 }
 
 .about__item {
@@ -24,12 +39,70 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 90px;
+  }
 }
 
-.about__item--ecology::before {
-  width: 32px;
-  height: 37px;
-  background-image: url("../img/icon-feature-flower.svg");
+.about__item--1 {
+  order: 0;
+
+  &::before {
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+}
+
+.about__item--2 {
+  order: 2;
+
+  &::before {
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-feature-money.svg");
+  }
+}
+
+.about__item--3 {
+  order: 4;
+
+  &::before {
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+}
+
+.about__item--4 {
+  order: 1;
+
+  &::before {
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+}
+
+.about__item--5 {
+  order: 3;
+
+  &::before {
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+}
+
+.about__item--6 {
+  order: 5;
+
+  &::before {
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 .about__desc {

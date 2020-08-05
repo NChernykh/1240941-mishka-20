@@ -1,4 +1,12 @@
 .container {
   margin: 0 auto;
   padding: 0 30px;
+
+  &--header {
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
 }

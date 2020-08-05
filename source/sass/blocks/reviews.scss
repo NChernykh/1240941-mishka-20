@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  margin-bottom: 105px;
+  margin-bottom: 90px;
 
   &::after {
     content: "";
@@ -20,4 +20,30 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  margin-bottom: 33px;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.reviews__author-name {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.reviews__author-contact {
+  font-style: italic;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.reviews__btn {
+  margin: 0 auto;
 }

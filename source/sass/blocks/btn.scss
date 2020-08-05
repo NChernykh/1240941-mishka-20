@@ -1,6 +1,7 @@
 .btn {
   display: block;
-  width: 260px;
+  min-width: 260px;
+  max-width: 292px;
   padding: 16px 0;
   font: inherit;
   font-size: 17px;
