@@ -12,7 +12,6 @@
       margin-right: 0;
     }
   }
-
 }
 
 @media (min-width: $desktop-width) {
@@ -35,7 +34,7 @@
       position: absolute;
       width: 1px;
       height: 88px;
-      top: 0px;
+      top: 0;
       left: 186px;
       background-color: rgba(0, 0, 0, 0.1);
     }
