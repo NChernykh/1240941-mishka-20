@@ -1,0 +1,21 @@
+.addition__list {
+  display: none;
+  padding-top: 18px;
+  font-size: 15px;
+
+  @media (min-width: 1055px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.addition__item {
+  margin-right: 65px;
+}
+
+.addition__text {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+    color: $darkgrey;
+  }
+}
