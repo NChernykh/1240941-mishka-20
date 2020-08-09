@@ -19,18 +19,33 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 24px;
 
-  @media (min-width: 1055px) {
+  @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
 
 .addition__item {
-  margin-right: 65px;
+  margin-right: 63px;
+}
+
+.addition__link {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  color: $black;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .addition__text {

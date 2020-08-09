@@ -1,4 +1,10 @@
 .social {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.social__link:not(:last-child) {
+  margin-right: 40px;
 }

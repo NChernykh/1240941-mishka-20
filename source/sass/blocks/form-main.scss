@@ -1,8 +1,23 @@
+.form-main .intro { //Стоит ли делать вложенность? Или прописать верхний margin в .form-main__desc
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 73px;
+  }
+}
+
 .form-main__desc {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 13px;
   line-height: 24px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     font-size: 17px;
+    line-height: 30px;
   }
 }
