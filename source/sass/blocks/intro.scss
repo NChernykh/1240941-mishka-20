@@ -17,18 +17,10 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat no-repeat;
       background-size: contain;
+      background-position: center center;
 
       @media (min-width: $desktop-width) {
-        right: 12px;
-        bottom: -20px;
-        width: 1250px;
-        height: 34px;
-        background-size: cover;
-      }
-
-      @media (min-width: $desktop-width) {
-        right: 0;
-        width: 1150px;
+        bottom: -18px;
         height: 34px;
       }
     }
