@@ -1,9 +1,7 @@
 .catalog-main {
   margin-bottom: 58px;
-}
 
-.catalog-main .intro {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 83px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
   }
 }
