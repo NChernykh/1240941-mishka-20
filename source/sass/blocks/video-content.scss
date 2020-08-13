@@ -9,4 +9,10 @@
     order: -1;
     padding-bottom: 68.25%;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    padding-bottom: 66.6%;
+  }
 }

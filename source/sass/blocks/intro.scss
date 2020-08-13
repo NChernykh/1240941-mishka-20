@@ -37,14 +37,14 @@
   background-repeat: no-repeat;
   background-position: center -17px;
 
-  &::after {
-    bottom: -494px;
-    z-index: 2;
-  }
-
   @media (min-width: $tablet-width) {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: top;
+
+    &::after {
+      bottom: -494px;
+      z-index: 2;
+    }
   }
 
   @media (min-width: $desktop-width) {

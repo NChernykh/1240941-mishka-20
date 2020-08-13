@@ -48,15 +48,10 @@
     justify-content: flex-end;
   }
 
-  .user-list__item a {
-    padding-left: 84px;
-  }
+  .user-list__item {
+    position: relative;
 
-  .user-list__search {
-    font-size: 0;
-
-    &::before,
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       top: -32px;
@@ -65,10 +60,14 @@
       height: 88px;
       background-color: rgba(0, 0, 0, 0.1);
     }
+  }
 
-    &::after {
-      left: 83px;
-    }
+  .user-list__item a {
+    padding-left: 84px;
+  }
+
+  .user-list__search {
+    font-size: 0;
   }
 }
 
