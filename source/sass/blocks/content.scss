@@ -1,8 +1,20 @@
 .content {
-  width: 100%;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 50px;
+    position: relative;
+    top: -117px;
+    margin-bottom: -63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -44px;
+  }
+}
+
+.content__container {
+  @media (min-width: $tablet-width) {
+    width: 100%;
     display: flex;
   }
 }
@@ -12,10 +24,47 @@
   display: block;
   padding-top: 24px;
   padding-bottom: 31px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $white;
   text-decoration: none;
+
+  &:hover {
+    transform: scaleY(1.1);
+    padding-top: 22px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 36px;
+    width: 40px;
+    height: 62px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 50%;
+    height: 119px;
+    padding-top: 27px;
+    padding-left: 36px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -23,15 +72,15 @@
   background-color: $maincolor;
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 30px;
+    top: 24px;
     right: 36px;
     width: 40px;
     height: 62px;
     background-image: url("../img/icon-interior.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+
+    @media (min-width: $tablet-width) {
+      top: 30px;
+    }
   }
 
   &:hover,
@@ -45,36 +94,21 @@
   background-color: #56c3b2;
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 31px;
-    right: 33px;
+    top: 21px;
+    right: 27px;
     width: 60px;
     height: 60px;
     background-image: url("../img/icon-toy.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+
+    @media (min-width: $tablet-width) {
+      top: 30px;
+      right: 32px;
+    }
   }
 
   &:hover,
   &:focus,
   &:active {
     background-color: #46c1ae;
-  }
-}
-
-.content__text {
-  margin: 0;
-  padding-left: 30px;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
-  color: $white;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 36px;
-    width: 200px;
-    font-size: 20px;
-    line-height: 30px;
   }
 }

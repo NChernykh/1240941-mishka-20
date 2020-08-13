@@ -1,7 +1,6 @@
 @import "fonts.scss";
 @import "variables.scss";
 @import "global.scss";
-@import "blocks/link.scss";
 @import "blocks/visually-hidden.scss";
 @import "blocks/btn.scss";
 @import "blocks/nav-toggle.scss";
@@ -17,8 +16,15 @@
 @import "blocks/promo-product.scss";
 @import "blocks/about.scss";
 @import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/map.scss";
 @import "blocks/footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+@import "blocks/catalog-main.scss";
 @import "blocks/form-main.scss";
 @import "blocks/products-catalog.scss";
+@import "blocks/product.scss";
+@import "blocks/video.scss";
+@import "blocks/video-content.scss";
+@import "blocks/modal.scss";

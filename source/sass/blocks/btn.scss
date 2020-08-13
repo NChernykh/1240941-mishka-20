@@ -1,8 +1,8 @@
 .btn {
   display: block;
-  min-width: 260px;
-  max-width: 292px;
-  padding: 16px 0;
+  min-width: 175px;
+  height: fit-content;
+  padding: 15px 0;
   font: inherit;
   font-size: 17px;
   line-height: 20px;
@@ -22,5 +22,6 @@
   &:focus,
   &:active {
     color: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(0deg, $darkgrey, $darkgrey);
   }
 }

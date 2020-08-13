@@ -1,18 +1,16 @@
 .nav-toggle {
   position: absolute;
-  top: -45px;
-  right: 30px;
+  top: -46px;
+  right: 32px;
   z-index: 2;
   display: block;
   width: 20px;
   height: 14px;
   cursor: pointer;
   border: none;
-  background-color: $black;
-}
+  background-color: $white;
 
-@media (min-width: $tablet-width) {
-  .nav-toggle {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
