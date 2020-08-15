@@ -47,21 +47,6 @@
   }
 }
 
-.footer__link {
-  &:hover,
-  &:focus,
-  &:active {
-    path {
-      fill: #46c1ae;
-    }
-  }
-
-  &:focus,
-  &:active {
-    opacity: 0.3;
-  }
-}
-
 .copyright .footer__link {
   @media (min-width: $tablet-width) {
     padding-top: 7px;

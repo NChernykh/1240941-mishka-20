@@ -8,3 +8,18 @@
 .social__link:not(:last-child) {
   margin-right: 40px;
 }
+
+.social__link-icon {
+  fill: #231f20;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: #46c1ae;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
