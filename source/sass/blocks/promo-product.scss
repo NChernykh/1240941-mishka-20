@@ -126,7 +126,7 @@
   color: $darkgrey;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -145,6 +145,10 @@
   display: block;
   margin-bottom: 20px;
   text-align: center;
+
+  & img {
+    width: 100%;
+  }
 
   @media (min-width: $tablet-width) {
     grid-row: 2/6;

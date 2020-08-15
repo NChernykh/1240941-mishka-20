@@ -1,3 +1,5 @@
+//burger-menu
+
 var mainNav = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.nav-toggle');
 

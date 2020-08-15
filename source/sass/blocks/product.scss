@@ -50,11 +50,15 @@
   @media (min-width: $tablet-width) {
     width: 50%;
     height: 334px;
+
+    & img {
+      width: 100%;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 316px;
-    height: 462px;
+    height: 459px;
   }
 }
 
