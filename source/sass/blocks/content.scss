@@ -1,20 +1,17 @@
 .content {
-  margin-bottom: 30px;
-
   @media (min-width: $tablet-width) {
-    position: relative;
-    top: -117px;
-    margin-bottom: -63px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: -47px;
+    bottom: 15px;
   }
 }
 
 .content__container {
   @media (min-width: $tablet-width) {
-    width: 100%;
     display: flex;
   }
 }
@@ -23,7 +20,7 @@
   position: relative;
   display: block;
   padding-top: 24px;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
   font-weight: bold;
@@ -60,8 +57,8 @@
 
   @media (min-width: $tablet-width) {
     width: 50%;
-    height: 119px;
-    padding-top: 27px;
+    height: 116px;
+    padding-top: 26px;
     padding-left: 36px;
     font-size: 20px;
     line-height: 30px;
