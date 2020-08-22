@@ -47,7 +47,7 @@
 .product__link-img {
   line-height: 0;
 
-  & img {
+  .product__link-img img {
     width: 100%;
   }
 
@@ -55,7 +55,7 @@
     width: 50%;
     height: 334px;
 
-    & img {
+    .product__link-img img {
       height: 100%;
       object-fit: cover;
     }

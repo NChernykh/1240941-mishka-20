@@ -1,0 +1,27 @@
+.user-textarea {
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 41px;
+  }
+}
+
+.user-textarea__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: start;
+  }
+}
+
+.user-textarea__name {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-top: 18px;
+  }
+}

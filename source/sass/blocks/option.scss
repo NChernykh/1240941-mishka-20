@@ -1,0 +1,34 @@
+.option {
+  display: flex;
+}
+
+.option__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
+.option__input {
+  margin: 0;
+  appearance: none;
+}
+
+
+.option__input:hover + .radiobuttons__label::before,
+.option__input:hover + .checkbox__label::before {
+  border: 2px solid #62d1ba;
+}
+
+.option__input:focus + .radiobuttons__label::before,
+.option__input:focus + .checkbox__label::before {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
