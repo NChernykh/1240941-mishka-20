@@ -16,6 +16,7 @@
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    z-index: 5;
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;

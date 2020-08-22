@@ -13,7 +13,7 @@
 .user-textarea__container {
   @media (min-width: $tablet-width) {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 
