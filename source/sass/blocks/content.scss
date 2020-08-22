@@ -29,11 +29,6 @@
   color: $white;
   text-decoration: none;
 
-  &:hover {
-    transform: scaleY(1.1);
-    padding-top: 22px;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -84,6 +79,11 @@
   &:focus,
   &:active {
     background-color: #59d5bc;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover {
+    }
   }
 }
 
