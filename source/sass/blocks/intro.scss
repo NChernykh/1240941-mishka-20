@@ -3,14 +3,13 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    z-index: -1;
     margin-top: -44px;
     margin-bottom: 68px;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      bottom: 0;
       width: 100%;
       height: 23px;
       background-image: url("../img/bg-zigzag-fill.svg");
@@ -35,7 +34,6 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
-    background-size: 575px auto; //откуда брать размеры?
   }
 
   @media (min-width: $tablet-width) {
@@ -43,9 +41,12 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: top;
 
+    &::after {
+      bottom: -14px;
+    }
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
-      background-size: 1150px auto;
     }
   }
 
@@ -55,13 +56,24 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
-      background-size: 1150px auto;
     }
   }
 }
 
+.intro--form-page {
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 102px;
+  }
+}
+
 .intro__title {
-  padding: 73px 50px;
+  padding: 73px 30px;
   margin: 0;
   text-align: center;
   font-size: 27px;
