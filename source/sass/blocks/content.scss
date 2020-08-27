@@ -20,7 +20,7 @@
   position: relative;
   display: block;
   padding-top: 24px;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
   padding-left: 30px;
   padding-right: 30px;
   font-weight: bold;
@@ -39,24 +39,24 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     opacity: 0.5;
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus,
-    &:active {
-      opacity: 0.3;
-    }
   }
 
   @media (min-width: $tablet-width) {
     width: 50%;
-    height: 116px;
     padding-top: 26px;
     padding-left: 36px;
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      transform: scaleY(1.1);
+      padding-top: 21px;
+    }
+
+    &:focus {
+      outline: none;
+      transform: none;
+    }
   }
 }
 
@@ -79,11 +79,6 @@
   &:focus,
   &:active {
     background-color: #59d5bc;
-  }
-
-  @media (min-width: $tablet-width) {
-    &:hover {
-    }
   }
 }
 
@@ -108,4 +103,12 @@
   &:active {
     background-color: #46c1ae;
   }
+}
+
+.content__link:hover ~ .content__link::after {
+  opacity: 0.7;
+}
+
+.content__link:focus ~ .content__link::after {
+  opacity: 0.3;
 }

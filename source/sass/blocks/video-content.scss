@@ -38,19 +38,20 @@
   transform: translate(-50%, -50%);
 }
 
-.video-content:hover .video-content__btn svg {
+.video-content:hover .video-content__icon {
   width: 120px;
   height: 95px;
   margin-left: -10px;
   margin-top: -9px;
 }
 
-.video-content:focus {
+.video-content__btn:focus,
+.video-content__icon:focus {
   outline: none;
 }
 
-.video-content:focus .video-content__btn svg,
-.video-content:active .video-content__btn svg {
+.video-content:focus .video-content__icon,
+.video-content:active .video-content__icon {
   width: 81px;
   height: 62px;
   opacity: 0.3;

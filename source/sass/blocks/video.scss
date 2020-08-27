@@ -15,6 +15,7 @@
 }
 
 .video__title {
+  position: relative;
   margin-top: 21px;
   margin-bottom: 26px;
   padding-left: 90px;
@@ -22,11 +23,26 @@
   font-size: 17px;
   line-height: 24px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 33px;
+    width: 32px;
+    height: 30px;
+    background-image: url("../img/icon-video.svg");
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 41px;
     margin-bottom: 22px;
     padding-left: 107px;
     font-size: 20px;
+
+    &::before {
+      top: -9px;
+      left: 40px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -34,6 +50,11 @@
     padding-top: 96px;
     padding-left: 0;
     padding-right: 50px;
+
+    &::before {
+      top: 42px;
+      left: 0;
+    }
   }
 }
 
@@ -70,6 +91,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-bottom: 58px;
+    margin-top: auto;
     width: 80%;
   }
 }
