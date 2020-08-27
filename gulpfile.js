@@ -12,6 +12,7 @@ const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 const del = require("del");
 const htmlMinimizer = require("gulp-html-minimizer");
+const terser = require('gulp-terser');
 
 // Styles
 
@@ -52,12 +53,8 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 //Images
 
@@ -128,16 +125,43 @@ const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlMinimizer({collapseWhitespace: true}))
   .pipe(gulp.dest("build"))
-}
+};
 
 exports.html = html;
+
+//Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
 
 //Build
 
 exports.build = gulp.series(
- clean,
- copy,
- styles,
- sprite,
- html
+  clean,
+  copy,
+  styles,
+  images,
+  sprite,
+  createWebp,
+  html,
+  scripts
+);
+
+exports.default = gulp.series(
+  clean,
+  copy,
+  styles,
+  images,
+  sprite,
+  createWebp,
+  html,
+  scripts,
+  server
 );
