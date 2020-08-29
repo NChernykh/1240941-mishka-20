@@ -17,40 +17,24 @@
 }
 
 .content__link {
-  position: relative;
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 31px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 23px;
+  padding-bottom: 18px;
   padding-left: 30px;
-  padding-right: 30px;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
-  color: $white;
+  padding-right: 27px;
   text-decoration: none;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 25px;
-    right: 36px;
-    width: 40px;
-    height: 62px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    opacity: 0.5;
-  }
-
   @media (min-width: $tablet-width) {
+    position: relative;
     width: 50%;
-    padding-top: 26px;
+    padding-top: 25px;
+    padding-bottom: 29px;
     padding-left: 36px;
-    font-size: 20px;
-    line-height: 30px;
 
     &:hover {
-      transform: scaleY(1.1);
-      padding-top: 21px;
+      margin-top: -5px;
+      padding-bottom: 34px;
     }
 
     &:focus {
@@ -63,18 +47,6 @@
 .content__link--left {
   background-color: $maincolor;
 
-  &::after {
-    top: 24px;
-    right: 36px;
-    width: 40px;
-    height: 62px;
-    background-image: url("../img/icon-interior.svg");
-
-    @media (min-width: $tablet-width) {
-      top: 30px;
-    }
-  }
-
   &:hover,
   &:focus,
   &:active {
@@ -85,19 +57,6 @@
 .content__link--right {
   background-color: #56c3b2;
 
-  &::after {
-    top: 21px;
-    right: 27px;
-    width: 60px;
-    height: 60px;
-    background-image: url("../img/icon-toy.svg");
-
-    @media (min-width: $tablet-width) {
-      top: 30px;
-      right: 32px;
-    }
-  }
-
   &:hover,
   &:focus,
   &:active {
@@ -105,10 +64,35 @@
   }
 }
 
-.content__link:hover ~ .content__link::after {
-  opacity: 0.7;
+.content__link-icon {
+  fill: #149080;
+  fill-opacity: 0.5;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 28px;
+    right: 34px;
+  }
 }
 
-.content__link:focus ~ .content__link::after {
-  opacity: 0.3;
+.content__link:hover .content__link-icon {
+  fill-opacity: 0.7;
+}
+
+.content__link:focus .content__link-icon {
+  fill-opacity: 0.3;
+}
+
+.content__link-text {
+  width: 160px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $white;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,17 +1,17 @@
 .container {
   margin: 0 auto;
 
-  &--index,
-  &--catalog,
-  &--form {
+  &__index,
+  &__catalog,
+  &__form {
     padding: 0 30px;
   }
 
   @media (min-width: $tablet-width) {
-    &--main,
-    &--index,
-    &--catalog,
-    &--form {
+    &__main,
+    &__index,
+    &__catalog,
+    &__form {
       padding: 0 50px;
     }
   }
@@ -20,16 +20,16 @@
     padding: 0 50px;
     max-width: 1150px;
 
-    &--catalog {
+    &__catalog {
       padding: 0 50px;
     }
 
-    &--index {
+    &__index {
       padding-right: 0;
       padding-left: 175px;
     }
 
-    &--form {
+    &__form {
       padding: 0 225px 0 110px;
     }
   }

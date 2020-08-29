@@ -6,11 +6,11 @@
     <title>HTML Academy: Мишка</title>
     <link href="css/styles.min.css" rel="stylesheet">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="fontbold">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   </head>
   <body class="page__body">
     <header class="header">
-      <div class="container container--main">
+      <div class="container container__main">
         <div class="header__top">
           <nav class="main-nav main-nav--opened  main-nav--nojs">
             <button class="nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span>
@@ -70,19 +70,27 @@
     <main class="main">
       <h1 class="visually-hidden">Магазин игрушек ручной работы Мишка</h1>
       <section class="intro intro--index">
-        <p class="intro__title intro__title--index"> Милые штуки ручной<br>работы для дома</p>
+        <h2 class="intro__title intro__title--index"> Милые штуки ручной<br>работы для дома</h2>
         <div class="content">
-          <div class="container container--main content__container">
-            <a class="content__link content__link--left" href="catalog.html">Предметы<br> интерьера
+          <div class="container container__main content__container">
+            <a class="content__link content__link--left" href="catalog.html">
+              <span class="content__link-text">Предметы интерьера</span>
+              <svg class="content__link-icon" width="41" height="62">
+                <use xlink:href="img/sprite.svg#icon-interior"></use>
+              </svg>
             </a>
-            <a class="content__link content__link--right" href="#">Детские<br> игрушки
+            <a class="content__link content__link--right" href="#">
+              <span class="content__link-text">Детские игрушки</span>
+              <svg class="content__link-icon" width="61" height="61">
+                <use xlink:href="img/sprite.svg#icon-toy"></use>
+              </svg>
             </a>
           </div>
         </div>
       </section>
       <div class="container">
         <section class="promo-product">
-          <div class="container--index promo-product__container">
+          <div class="container__index promo-product__container">
             <h2 class="visually-hidden">Акции и товары недели</h2>
             <h3 class="promo-product__title">Вязаные корзинки</h3>
             <p class="promo-product__subtitle">Товар недели</p>
@@ -114,11 +122,11 @@
               </picture>
             </a>
             <p class="promo-product__cost">Цена: 990&nbsp;руб.</p>
-            <a class="btn promo-product__btn" href="#">Заказать</a>
+            <a class="btn promo-product__btn js-modal" href="#">Заказать</a>
           </div>
         </section>
         <section class="about">
-          <div class="container--index about__container">
+          <div class="container__index about__container">
             <h2 class="about__title">Коротко о нас:</h2>
             <ul class="about__list">
               <li class="about__item about__item--1">
@@ -143,7 +151,7 @@
           </div>
         </section>
         <section class="reviews">
-          <div class="container--index reviews__container slider">
+          <div class="container__index reviews__container slider">
             <h2 class="reviews__title">Отзывы</h2>
             <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
@@ -161,7 +169,7 @@
           </div>
         </section>
         <section class="contacts">
-          <div class="container--index contacts__container">
+          <div class="container__index contacts__container">
             <h2 class="contacts__title">Контакты</h2>
             <dl class="contacts__list">
               <div class="contacts__item">
@@ -182,7 +190,7 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="container container--main footer__container">
+      <div class="container container__main footer__container">
         <a class="footer__logo" href="index.html">
           <svg class="footer__logo-link" width="102" height="34">
             <use xlink:href="img/sprite.svg#icon-footer"></use>

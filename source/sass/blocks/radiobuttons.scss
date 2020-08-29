@@ -1,6 +1,7 @@
 .radiobuttons__label {
   position: relative;
   display: flex;
+  margin-bottom: 24px;
   cursor: pointer;
   user-select: none;
   padding-left: 60px;
@@ -9,10 +10,15 @@
   line-height: 18px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
     padding-left: 80px;
     font-size: 19px;
     line-height: 18px;
   }
+}
+
+.radiobuttons__label:last-child {
+  margin-bottom: 0;
 }
 
 .radiobuttons__input {
@@ -62,14 +68,6 @@
     left: 17px;
     width: 20px;
     height: 20px;
-  }
-}
-
-.radiobuttons__wrap:not(:last-child) {
-  margin-bottom: 24px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 58px;
   }
 }
 
