@@ -1,36 +1,12 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
 <head>
-  <!-- Pixel Glass -->
-      <style>
-        HTML {
-          background-repeat: no-repeat;
-          background-position:  50% 0;
-          /* По умолчанию показывается мобильный макет */
-          background-image: url( "pixel/Mobile-catalog.jpg" );
-        }
-        /* Планшет */
-        @media ( min-width: 768px ) {
-          HTML {
-            /* Планшетный макет */
-            background-image: url( "pixel/Tablet-catalog.jpg" );
-          }
-        }
-        /* Десктоп */
-        @media ( min-width: 1150px ) {
-          HTML {
-            /* Десктопный макет */
-            background-image: url( "pixel/Desktop-catalog.jpg" );
-          }
-        }
-      </style>
-      <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-      <script src="../node_modules/pixel-glass/script.js"></script>
-      <!-- // Pixel Glass -->
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>HTML Academy: Мишка/Каталог</title>
   <link href="css/styles.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="fontbold">
 </head>
 <body class="page__body">
   <header class="header">
