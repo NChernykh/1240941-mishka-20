@@ -15,3 +15,17 @@
     margin-right: 30px;
   }
 }
+
+.copyright__logo {
+  fill: $maincolor;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:focus,
+  &:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+}

@@ -43,8 +43,8 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 50% 50%;
-    row-gap: 28px;
+    grid-template-columns: auto 50%;
+    gap: 28px 40px;
   }
 }
 

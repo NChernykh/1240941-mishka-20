@@ -26,7 +26,7 @@
   line-height: 30px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     font-size: 43px;
     line-height: 50px;
 
@@ -40,14 +40,14 @@
       background-image: url("../img/icon-flag.svg");
 
       @media (min-width: $desktop-width) {
-        top: 63px;
+        top: 60px;
         left: -113px;
       }
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
     padding-top: 80px;
     font-size: 53px;
     line-height: 57px;
@@ -85,7 +85,7 @@
 }
 
 .contacts__feature {
-  width: 32%;
+  width: 31%;
 
   @media (min-width: $tablet-width) {
     width: 23%;
@@ -98,33 +98,39 @@
 
 .contacts__value {
   margin: 0;
+}
 
-  & a {
-    text-decoration: none;
-    padding-bottom: 2px;
-    color: inherit;
-    border-bottom: 1px solid #62d1ba;
+.contacts__link {
+  text-decoration: none;
+  padding-bottom: 2px;
+  color: inherit;
+  border-bottom: 1px solid #62d1ba;
 
-    @media (min-width: $desktop-width) {
-      padding-bottom: 8px;
-    }
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+    border-color: #46c1ae;
+  }
+
+  &:focus {
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 8px;
   }
 }
 
 .contacts__btn {
   margin: 0 30px;
-  font-size: 18px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     width: 230px;
-    font-size: 17px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     margin-left: 175px;
-    width: 230px;
-    font-size: 17px;
   }
 }
