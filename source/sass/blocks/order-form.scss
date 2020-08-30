@@ -75,9 +75,14 @@
       position: absolute;
       top: 7px;
       right: 0;
-      width: 200px;
+      z-index: -5;
+      width: 77%;
       height: 1px;
       background-color: #62d1ba;
+    }
+
+    &--email::after {
+      width: 70%;
     }
   }
 

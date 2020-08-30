@@ -91,7 +91,7 @@
               <h3 class="product__title"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h3>
               <p class="product__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
               <div class="product__block"><span class="product__cost">1&nbsp;200&nbsp;руб.</span>
-                <a class="product__cost-icon" href="">
+                <a class="product__cost-icon js-modal" href="">
                   <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
@@ -114,7 +114,7 @@
               <h3 class="product__title"><a class="product__link" href="#">Корзинка для белья</a></h3>
               <p class="product__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
               <div class="product__block"><span class="product__cost">690&nbsp;руб.</span>
-                <a class="product__cost-icon" href="">
+                <a class="product__cost-icon js-modal" href="">
                   <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
@@ -137,7 +137,7 @@
               <h3 class="product__title"><a class="product__link" href="#">Большая корзинка для&nbsp;игрушек</a></h3>
               <p class="product__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
               <div class="product__block"><span class="product__cost">1&nbsp;500&nbsp;руб.</span>
-                <a class="product__cost-icon" href="">
+                <a class="product__cost-icon js-modal" href="">
                   <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
@@ -210,6 +210,26 @@
       </div>
     </div>
   </footer>
+  <div class="modal-overlay"></div>
+  <section class="modal cart">
+    <h2 class="cart__title">Добавить в&nbsp;корзину</h2>
+    <div class="cart__container">
+      <p class="cart__text">Выберите размер:</p>
+      <div class="cart__list">
+        <div class="cart__item">
+          <span class="cart__size cart__size--active">S</span>
+        </div>
+        <div class="cart__item">
+          <span class="cart__size">M</span>
+        </div>
+        <div class="cart__item">
+          <span class="cart__size">L</span>
+        </div>
+      </div>
+      <a class="btn cart__btn" href="">Добавить</a>
+    </div>
+    <button class="modal__close" type="button" aria-label="Закрыть"></button>
+  </section>
   <script src="js/script.min.js"></script>
 </body>
 </html>

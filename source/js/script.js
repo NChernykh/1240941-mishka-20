@@ -18,10 +18,11 @@ var overlay = document.querySelector(".modal-overlay");
 var close = modal.querySelector(".modal__close");
 
 for(let link of links) {
-  link.onclick = function() {
+  link.addEventListener("click", function(evt) {
+    evt.preventDefault();
     modal.classList.add("modal__show");
     overlay.style.display = "block";
-  }
+  })
 };
 
 close.addEventListener("click", function (evt) {
@@ -39,14 +40,3 @@ window.addEventListener("keydown" , function (evt) {
     }
   }
 });
-
-//корзина
-
-var cartItems = document.querySelectorAll(".cart__item");
-var sizeLink = document.querySelector(".cart__size");
-
-for(let cartItem of cartItems) {
-  cartItem.onclick = function() {
-    sizeLink.classList.toggle("cart__size--active");
-  }
-};
