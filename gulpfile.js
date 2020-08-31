@@ -52,9 +52,17 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+  gulp.watch("source/js/*.js", gulp.series("scripts")).on("change", sync.reload);
 }
 
 //Images
@@ -144,26 +152,24 @@ exports.scripts = scripts;
 
 //Build
 
-exports.build = gulp.series(
-  clean,
-  copy,
-  styles,
-  images,
-  sprite,
-  createWebp,
-  html,
-  scripts
-);
+const build = (done) => {
+  gulp.series(
+    clean,
+    copy,
+    styles,
+    images,
+    sprite,
+    createWebp,
+    html,
+    scripts
+  )(done)
+};
+
+exports.build = build;
+
+//default
 
 exports.default = gulp.series(
-  clean,
-  copy,
-  styles,
-  images,
-  sprite,
-  createWebp,
-  html,
-  scripts,
-  server,
+  build,
   watcher
 );
