@@ -1,40 +1,16 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
 <head>
-  <!-- Pixel Glass -->
-      <style>
-        HTML {
-          background-repeat: no-repeat;
-          background-position:  50% 0;
-          /* По умолчанию показывается мобильный макет */
-          background-image: url( "pixel/Mobile-catalog.jpg" );
-        }
-        /* Планшет */
-        @media ( min-width: 768px ) {
-          HTML {
-            /* Планшетный макет */
-            background-image: url( "pixel/Tablet-catalog.jpg" );
-          }
-        }
-        /* Десктоп */
-        @media ( min-width: 1150px ) {
-          HTML {
-            /* Десктопный макет */
-            background-image: url( "pixel/Desktop-catalog.jpg" );
-          }
-        }
-      </style>
-      <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-      <script src="../node_modules/pixel-glass/script.js"></script>
-      <!-- // Pixel Glass -->
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>HTML Academy: Мишка/Каталог</title>
   <link href="css/styles.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="container container--main">
+    <div class="container container__main">
       <div class="header__top">
         <nav class="main-nav main-nav--opened  main-nav--nojs">
           <button class="nav-toggle" type="button">
@@ -95,80 +71,84 @@
   <main class="catalog-main">
       <h1 class="visually-hidden">Каталог товаров</h1>
       <section class="intro">
-        <p class="intro__title">Каталог товаров</p>
+        <h2 class="intro__title">Каталог товаров</h2>
       </section>
       <section class="products-catalog">
-        <div class="container container--catalog">
-          <h2 class="visually-hidden">Карточки товара</h2>
-          <div class="products-catalog__cards">
-            <acticle class="product">
-              <a href="#" class="product__link-img">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
-                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-                  <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Вязанная игрушка Зайчик" width="260" height="195">
+        <h2 class="visually-hidden">Карточки товара</h2>
+        <div class="container container__catalog products-catalog__cards">
+          <acticle class="product">
+            <a href="#" class="product__link-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Вязанная игрушка Зайчик" width="260" height="195">
               </picture>
-              </a>
-              <div class="product__item">
-                <h3 class="product__title"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h3>
-                <p class="product__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
-                <div class="product__block"><span class="product__cost">1&nbsp;200&nbsp;руб.</span>
-                  <svg class="product__cost-icon" width="20" height="19">
+            </a>
+            <div class="product__item">
+              <h3 class="product__title"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h3>
+              <p class="product__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
+              <div class="product__block"><span class="product__cost">1&nbsp;200&nbsp;руб.</span>
+                <a class="product__cost-icon js-modal" href="">
+                  <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
-                </div>
+                </a>
               </div>
-            </acticle>
-            <acticle class="product">
-              <a href="" class="product__link-img">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
-                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-                  <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Вязанная корзинка для белья" width="260" height="195">
-                </picture>
-              </a>
-              <div class="product__item">
-                <h3 class="product__title">Корзинка для белья</h3>
-                <p class="product__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
-                <div class="product__block"><span class="product__cost">690&nbsp;руб.</span>
-                  <svg class="product__cost-icon" width="20" height="19">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </div>
-              </div>
-            </acticle>
-            <acticle class="product">
-              <a href="" class="product__link-img">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
-                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
-                  <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек" width="260" height="195">
+            </div>
+          </acticle>
+          <acticle class="product">
+            <a href="" class="product__link-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Вязанная корзинка для белья" width="260" height="195">
               </picture>
-              </a>
-              <div class="product__item">
-                <h3 class="product__title">Большая корзинка для&nbsp;игрушек</h3>
-                <p class="product__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
-                <div class="product__block"><span class="product__cost">1&nbsp;500&nbsp;руб.</span>
-                  <svg class="product__cost-icon" width="20" height="19">
+            </a>
+            <div class="product__item">
+              <h3 class="product__title"><a class="product__link" href="#">Корзинка для белья</a></h3>
+              <p class="product__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
+              <div class="product__block"><span class="product__cost">690&nbsp;руб.</span>
+                <a class="product__cost-icon js-modal" href="">
+                  <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
-                </div>
+                </a>
               </div>
-            </acticle>
-          </div>
+            </div>
+          </acticle>
+          <acticle class="product">
+            <a href="" class="product__link-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек" width="260" height="195">
+              </picture>
+            </a>
+            <div class="product__item">
+              <h3 class="product__title"><a class="product__link" href="#">Большая корзинка для&nbsp;игрушек</a></h3>
+              <p class="product__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
+              <div class="product__block"><span class="product__cost">1&nbsp;500&nbsp;руб.</span>
+                <a class="product__cost-icon js-modal" href="">
+                  <svg class="product__icon" width="20" height="19">
+                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </acticle>
         </div>
       </section>
       <section class="video">
-        <div class="container container--catalog">
+        <div class="container container__catalog">
           <div class="video__container">
             <h2 class="video__title">Процесс производства</h2>
             <div class="video-content">
@@ -189,14 +169,14 @@
               </button>
             </div>
             <p class="video__desc">По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="btn video__btn" href="№">Сделать заказ</a>
+            <a class="btn video__btn" href="form.html">Сделать заказ</a>
           </div>
         </div>
       </section>
     </div>
   </main>
   <footer class="footer">
-    <div class="container container--main footer__container">
+    <div class="container container__main footer__container">
       <a class="footer__logo footer__link" href="index.html">
         <svg class="footer__logo-link" width="102" height="34">
           <use xlink:href="img/sprite.svg#icon-footer"></use>
@@ -230,6 +210,26 @@
       </div>
     </div>
   </footer>
+  <div class="modal-overlay"></div>
+  <section class="modal cart">
+    <h2 class="cart__title">Добавить в&nbsp;корзину</h2>
+    <div class="cart__container">
+      <p class="cart__text">Выберите размер:</p>
+      <div class="cart__list">
+        <div class="cart__item">
+          <span class="cart__size cart__size--active">S</span>
+        </div>
+        <div class="cart__item">
+          <span class="cart__size">M</span>
+        </div>
+        <div class="cart__item">
+          <span class="cart__size">L</span>
+        </div>
+      </div>
+      <a class="btn cart__btn" href="">Добавить</a>
+    </div>
+    <button class="modal__close" type="button" aria-label="Закрыть"></button>
+  </section>
   <script src="js/script.min.js"></script>
 </body>
 </html>

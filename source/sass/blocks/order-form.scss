@@ -17,7 +17,7 @@
   border: none;
 }
 
-.order-form--radiobuttons {
+.order-form__item--radiobuttons {
   margin-bottom: 43px;
 
   @media (min-width: $tablet-width) {
@@ -25,7 +25,7 @@
   }
 }
 
-.order-form--checkbox {
+.order-form__item--checkbox {
   margin-bottom: 42px;
 
   @media (min-width: $tablet-width) {
@@ -75,9 +75,14 @@
       position: absolute;
       top: 7px;
       right: 0;
-      width: 200px;
+      z-index: -5;
+      width: 77%;
       height: 1px;
       background-color: #62d1ba;
+    }
+
+    &--email::after {
+      width: 70%;
     }
   }
 

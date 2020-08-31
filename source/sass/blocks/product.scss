@@ -35,13 +35,13 @@
   @media (min-width: $desktop-width) {
     width: auto;
     min-height: 195px;
-    padding: 0 27px;
+    padding: 0 26px;
   }
 }
 
 .product__title {
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   padding-top: 27px;
   font-weight: bold;
   font-size: 17px;
@@ -49,6 +49,10 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 5px;
   }
 }
 
@@ -120,6 +124,13 @@
   right: 0;
   width: 20px;
   height: 19px;
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
+  }
+}
+
+.product__icon {
   opacity: 0.2;
   fill: $black;
 

@@ -14,7 +14,8 @@
       height: 23px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat no-repeat;
-      background-size: cover;
+      background-position: top;
+      background-size: auto 100%;
     }
   }
 
@@ -43,7 +44,6 @@
 
     &::after {
       bottom: -14px;
-      right: 6px;
     }
 
     @media (min-resolution: 2dppx) {
@@ -57,9 +57,8 @@
     background-color: #f9f9f9;
 
     &::after {
-      bottom: -3px;
-      right: 0;
-      background-image: url("../img/zigzag-fill-desktop.svg");
+      bottom: -4px;
+      background-size: auto 109%;
     }
 
     @media (min-resolution: 2dppx) {
