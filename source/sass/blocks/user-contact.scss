@@ -4,8 +4,12 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 50px;
     padding-top: 47px;
-    padding-bottom: 25px;
+    padding-bottom: 26px;
     background-color: $lightgrey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
   }
 }
 
@@ -19,29 +23,10 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: baseline;
-    margin-bottom: 25px;
-  }
-}
-
-.user-contact__icon {
-  position: absolute;
-  top: 11px;
-  right: 6px;
-  fill: $black;
-  opacity: 0.2;
-
-  @media (min-width: $tablet-width) {
-    right: 25px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: $desktop-width) {
-    right: 6px;
+    margin-bottom: 20px;
   }
-}
-
-.field-text__input:hover + .user-contact__icon,
-.field-text__input:focus + .user-contact__icon,
-.field-text__input:active + .user-contact__icon {
-  fill: #62d1ba;
-  opacity: 1;
 }

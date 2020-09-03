@@ -9,7 +9,7 @@
   }
 }
 
-.main-nav--closed .nav-toggle::before {
+.main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@
   box-shadow: 0 5px 0 0 #231f20, 0 10px 0 0 #231f20;
 }
 
-.main-nav--closed .nav-toggle:active::before {
+.main-nav--closed .main-nav__toggle:active::before {
   background-color: rgba(#231f20, 0.3);
   box-shadow:
     0 5px 0 0 rgba(#231f20, 0.3),
@@ -28,20 +28,16 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-nav--closed .site-list__item {
+  .main-nav--closed .main-nav__item {
     display: none;
   }
 
-  .main-nav--closed .user-list__item {
-    display: none;
-  }
-
-  .main-nav--nojs .nav-toggle {
+  .main-nav--nojs .main-nav__toggle {
     display: none;
   }
 }
 
-.main-nav--opened .nav-toggle {
+.main-nav--opened .main-nav__toggle {
   top: -50px;
   right: 33px;
   height: 21px;
@@ -101,11 +97,11 @@
   }
 
   &:hover {
-    color: fade-out($black, 0.6);
+    color: fade-out($black, 0.4);
   }
 
   &:focus,
   &:active {
-    color: fade-out($black, 0.3);
+    color: fade-out($black, 0.7);
   }
 }

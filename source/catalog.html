@@ -10,10 +10,10 @@
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="container container__main">
+    <div class="container container--main">
       <div class="header__top">
-        <nav class="main-nav main-nav--opened  main-nav--nojs">
-          <button class="nav-toggle" type="button">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="nav-toggle main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
@@ -31,7 +31,7 @@
           <ul class="main-nav__list user-list">
             <li class="main-nav__item user-list__item">
               <a class="main-nav__link user-list__search" href="search.html">
-                <svg class="user-list__icon user-list__search-icon" width="20" height="19">
+                <svg class="user-list__icon user-list__icon--search" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
                 Поиск по сайту
@@ -39,7 +39,7 @@
             </li>
             <li class="main-nav__item user-list__item">
               <a class="main-nav__link user-list__cart" href="cart.html">
-                <svg class="user-list__icon user-list__cart-icon" width="20" height="19">
+                <svg class="user-list__icon user-list__icon--cart" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста
@@ -69,14 +69,15 @@
     </div>
   </header>
   <main class="catalog-main">
-      <h1 class="visually-hidden">Каталог товаров</h1>
-      <section class="intro">
-        <h2 class="intro__title">Каталог товаров</h2>
-      </section>
+    <h1 class="visually-hidden">Каталог товаров</h1>
+    <section class="intro">
+      <h2 class="intro__title">Каталог товаров</h2>
+    </section>
+    <div class="container">
       <section class="products-catalog">
         <h2 class="visually-hidden">Карточки товара</h2>
-        <div class="container container__catalog products-catalog__cards">
-          <acticle class="product">
+        <div class="container__catalog products-catalog__cards">
+          <div class="product">
             <a href="#" class="product__link-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
@@ -91,15 +92,15 @@
               <h3 class="product__title"><a class="product__link" href="#">Зайчик-попрыгайчик</a></h3>
               <p class="product__desc">Рост 30&nbsp;см, вес 200&nbsp;г</p>
               <div class="product__block"><span class="product__cost">1&nbsp;200&nbsp;руб.</span>
-                <a class="product__cost-icon js-modal" href="">
+                <a class="product__cost-icon js-modal" href="" aria-label="Купить">
                   <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                 </a>
               </div>
             </div>
-          </acticle>
-          <acticle class="product">
+          </div>
+          <div class="product">
             <a href="" class="product__link-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
@@ -114,15 +115,15 @@
               <h3 class="product__title"><a class="product__link" href="#">Корзинка для белья</a></h3>
               <p class="product__desc">Диаметр 15&nbsp;см, высота 10&nbsp;см</p>
               <div class="product__block"><span class="product__cost">690&nbsp;руб.</span>
-                <a class="product__cost-icon js-modal" href="">
+                <a class="product__cost-icon js-modal" href="" aria-label="Купить">
                   <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                 </a>
               </div>
             </div>
-          </acticle>
-          <acticle class="product">
+          </div>
+          <div class="product">
             <a href="" class="product__link-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
@@ -137,18 +138,18 @@
               <h3 class="product__title"><a class="product__link" href="#">Большая корзинка для&nbsp;игрушек</a></h3>
               <p class="product__desc">Диаметр 30&nbsp;см, высота 30&nbsp;см</p>
               <div class="product__block"><span class="product__cost">1&nbsp;500&nbsp;руб.</span>
-                <a class="product__cost-icon js-modal" href="">
+                <a class="product__cost-icon js-modal" href="" aria-label="Купить">
                   <svg class="product__icon" width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                 </a>
               </div>
             </div>
-          </acticle>
+          </div>
         </div>
       </section>
       <section class="video">
-        <div class="container container__catalog">
+        <div class="container__catalog">
           <div class="video__container">
             <h2 class="video__title">Процесс производства</h2>
             <div class="video-content">
@@ -176,7 +177,7 @@
     </div>
   </main>
   <footer class="footer">
-    <div class="container container__main footer__container">
+    <div class="container container--main footer__container">
       <a class="footer__logo footer__link" href="index.html">
         <svg class="footer__logo-link" width="102" height="34">
           <use xlink:href="img/sprite.svg#icon-footer"></use>

@@ -3,15 +3,16 @@
 
   &__index,
   &__catalog,
-  &__form {
+  &--form {
     padding: 0 30px;
   }
 
   @media (min-width: $tablet-width) {
-    &__main,
+    &--main,
     &__index,
+    &--content,
     &__catalog,
-    &__form {
+    &--form {
       padding: 0 50px;
     }
   }
@@ -20,16 +21,16 @@
     padding: 0 50px;
     max-width: 1150px;
 
-    &__catalog {
-      padding: 0 50px;
-    }
-
     &__index {
       padding-right: 0;
       padding-left: 175px;
     }
 
-    &__form {
+    &__catalog {
+      padding: 0;
+    }
+
+    &--form {
       padding: 0 225px 0 110px;
     }
   }

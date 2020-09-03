@@ -10,10 +10,10 @@
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="container container__main">
+    <div class="container container--main">
       <div class="header__top">
-        <nav class="main-nav main-nav--opened  main-nav--nojs">
-          <button class="nav-toggle" type="button">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <button class="nav-toggle main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
@@ -31,7 +31,7 @@
           <ul class="main-nav__list user-list">
             <li class="main-nav__item user-list__item">
               <a class="main-nav__link user-list__search" href="search.html">
-                <svg class="user-list__icon user-list__search-icon" width="20" height="19">
+                <svg class="user-list__icon user-list__icon--search" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
                 Поиск по сайту
@@ -39,7 +39,7 @@
             </li>
             <li class="main-nav__item user-list__item">
               <a class="main-nav__link user-list__cart" href="cart.html">
-                <svg class="user-list__icon user-list__cart-icon" width="20" height="19">
+                <svg class="user-list__icon user-list__icon--cart" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста
@@ -73,14 +73,14 @@
     <section class="intro intro--form-page">
       <h2 class="intro__title">Вязание на заказ</h2>
     </section>
-    <div class="container container__form">
+    <div class="container container--form">
       <p class="form-main__desc">Мы&nbsp;будем рады воплотить в&nbsp;жизнь ваши пожелания! Заполните простую форму заказа и&nbsp;мы&nbsp;свяжемся с&nbsp;вами, чтобы уточнить детали.</p>
     </div>
     <section class="form">
       <h2 class="visually-hidden">Форма заказа</h2>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order-form__item order-form__item--radiobuttons">
-          <div class="container container__form order-form__container">
+          <div class="container container--form order-form__container">
             <h3 class="order-form__name">Тип</h3>
             <div class="radiobuttons">
               <label class="radiobuttons__label">
@@ -95,7 +95,7 @@
           </div>
         </fieldset>
         <fieldset class="order-form__item order-form__item--checkbox">
-          <div class="container container__form order-form__container order-form__container--checkbox">
+          <div class="container container--form order-form__container order-form__container--checkbox">
             <h3 class="order-form__name">Цвет</h3>
             <div class="checkbox">
               <div class="checkbox__wrap">
@@ -138,7 +138,7 @@
           </div>
         </fieldset>
         <div class="user-data">
-          <div class="container container__form user-data__container">
+          <div class="container container--form user-data__container">
             <p class="order-form__name user-data__name">ФИО</p>
             <div class="order-form__block">
                 <label class="field-text">
@@ -157,13 +157,13 @@
           </div>
         </div>
         <div class="user-contact">
-          <div class="container container__form user-contact__container">
+          <div class="container container--form user-contact__container">
             <div class="user-contact__item">
               <p class="order-form__name user-contact__name">Тел</p>
               <p class="order-form__block">
                 <label class="field-text" aria-label="Введите номер телефона">
                   <input class="field-text__input" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
-                  <svg class="user-contact__icon" width="25" height="24">
+                  <svg class="field-text__icon" width="25" height="24">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
                 </label>
@@ -174,24 +174,25 @@
               <p class="order-form__block">
                 <label class="field-text" aria-label="Введите email">
                   <input class="field-text__input" type="email" name="email" placeholder="Ваш Email*" required>
-                  <svg class="user-contact__icon" width="32" height="32">
-                    <use xlink:href="img/sprite.svg#icon-mail"></use></svg>
+                  <svg class="field-text__icon" width="32" height="32">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
                 </label>
               </p>
             </div>
           </div>
         </div>
         <div class="user-textarea">
-          <div class="container container__form user-textarea__container">
+          <div class="container container--form user-textarea__container">
             <p class="order-form__name user-textarea__name">Доп</p>
             <div class="order-form__block">
               <label class="field-text" aria-label="Введите сообщение">
-                <textarea class="field-text__input field-text__input--textarea" name="comment" cols="30" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <textarea class="field-text__input field-text__input--textarea" name="comment" cols="30" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </label>
             </div>
           </div>
         </div>
-        <div class="container container__form order-form__box">
+        <div class="container container--form order-form__box">
           <p class="order-form__text">*Поля обязательны для заполнения</p>
           <button class="btn order-form__btn" type="submit">Отправить заказ</button>
         </div>
@@ -199,7 +200,7 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="container container__main footer__container">
+    <div class="container container--main footer__container">
       <a class="footer__logo footer__link" href="index.html">
         <svg class="footer__logo-link" width="102" height="34">
           <use xlink:href="img/sprite.svg#icon-footer"></use>

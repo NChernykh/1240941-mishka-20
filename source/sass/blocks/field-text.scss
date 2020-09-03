@@ -5,7 +5,7 @@
   flex-direction: column;
   font-weight: bold;
   font-size: 17px;
-  line-height: 18px;
+  line-height: 23px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -15,14 +15,10 @@
 }
 
 .field-text:not(:last-child) {
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
   }
 }
 
@@ -34,10 +30,10 @@
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 17px 10px 17px 0;
+  padding: 14px 10px 14px 0;
   font-family: inherit;
   font-size: 17px;
-  line-height: 18px;
+  line-height: 23px;
   color: $black;
   border: none;
   box-shadow: inset 0 -2px 0 $black;
@@ -53,6 +49,7 @@
   }
 
   &::placeholder {
+    line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
 
     @media (min-width: $tablet-width) {
@@ -73,10 +70,34 @@
   }
 }
 
+.field-text__icon {
+  position: absolute;
+  top: 11px;
+  right: 6px;
+  fill: $black;
+  opacity: 0.2;
+
+  @media (min-width: $tablet-width) {
+    right: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 15px;
+    right: 5px;
+  }
+}
+
+.field-text__input:hover + .field-text__icon,
+.field-text__input:focus + .field-text__icon,
+.field-text__input:active + .field-text__icon {
+  fill: #62d1ba;
+  opacity: 1;
+}
+
 .field-text__input--textarea {
   padding-top: 16px;
   padding-left: 15px;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
   border: 2px solid $darkgrey;
   box-shadow: none;
 

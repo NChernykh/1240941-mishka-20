@@ -1,3 +1,13 @@
+.user-list__cart:hover .user-list__icon--cart {
+  fill: $maincolor;
+  opacity: 1;
+}
+
+.user-list__cart:focus .user-list__icon--cart,
+.user-list__cart:active .user-list__icon--cart {
+  fill: fade-out($maincolor, 0.7);
+}
+
 .user-list__icon {
   position: absolute;
   top: 33px;
@@ -14,29 +24,29 @@
 
   &:focus,
   &:active {
-    fill: fade-out($maincolor, 0.2);
+    fill: fade-out($maincolor, 0.7);
   }
-}
 
-.user-list__search-icon {
-  top: 33px;
-  left: 32px;
-  width: 18px;
-  height: 18px;
+  &--search {
+    top: 33px;
+    left: 32px;
+    width: 18px;
+    height: 18px;
 
-  @media (min-width: $tablet-width) {
-    top: 4px;
+    @media (min-width: $tablet-width) {
+      top: 4px;
+    }
   }
-}
 
-.user-list__cart-icon {
-  top: 31px;
-  left: 32px;
-  width: 20px;
-  height: 19px;
+  &--cart {
+    top: 31px;
+    left: 32px;
+    width: 20px;
+    height: 19px;
 
-  @media (min-width: $tablet-width) {
-    top: 2px;
+    @media (min-width: $tablet-width) {
+      top: 2px;
+    }
   }
 }
 

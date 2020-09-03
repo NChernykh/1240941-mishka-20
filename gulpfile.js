@@ -24,6 +24,19 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
+}
+
+exports.styles = styles;
+
+const stylesMin = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
@@ -31,14 +44,14 @@ const styles = () => {
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+exports.stylesMin = stylesMin;
 
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -54,13 +67,14 @@ exports.server = server;
 const watcher = () => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
     ui: false,
   });
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("stylesMin"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
   gulp.watch("source/js/*.js", gulp.series("scripts")).on("change", sync.reload);
 }
@@ -73,9 +87,9 @@ const images = () => {
   imagemin.optipng({optimizationLevel: 3}),
   imagemin.mozjpeg({quality: 75, progressive: true}),
   imagemin.svgo({
-        plugins: [
-            {cleanupIDs: false}
-        ]
+    plugins: [
+      {cleanupIDs: false}
+      ]
     })
   ]))
 }
@@ -157,6 +171,7 @@ const build = (done) => {
     clean,
     copy,
     styles,
+    stylesMin,
     images,
     sprite,
     createWebp,

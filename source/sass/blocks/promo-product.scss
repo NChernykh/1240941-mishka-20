@@ -135,9 +135,23 @@
 
 .promo-product__item {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 5px;
   padding-bottom: 10px;
   border-bottom: 1px solid $bordercolor;
+}
+
+.promo-product__feature {
+  width: 30%;
+  margin-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 33.5%;
+  }
+}
+
+.promo-product__value {
+  margin: 0;
 }
 
 .promo-product__link {
@@ -160,18 +174,6 @@
   @media (min-width: $desktop-width) {
     grid-row: 1/6;
   }
-}
-
-.promo-product__feature {
-  width: 38%;
-
-  @media (min-width: $tablet-width) {
-    width: 33.5%;
-  }
-}
-
-.promo-product__value {
-  margin: 0;
 }
 
 .promo-product__cost {
