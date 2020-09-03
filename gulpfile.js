@@ -7,12 +7,12 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 const del = require("del");
 const htmlMinimizer = require("gulp-html-minimizer");
-const terser = require('gulp-terser');
+const terser = require("gulp-terser");
 
 // Styles
 
